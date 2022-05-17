@@ -11,12 +11,12 @@ def arithmetic_arranger(problems,solve=False):
   sumx = ""
   string =""
   arranged_problems=""
+  #error1
+  if len(problems)>5: 
+    return "Error: Too many problems."
+    
   for problem in problems:
-
-    #error1
-    if len(problems)>5: 
-      return "Error: Too many problems."
-      break
+    
     #splitting
     fnum = problem.split(" ")[0]
     operator = problem.split(" ")[1]
@@ -70,3 +70,8 @@ def arithmetic_arranger(problems,solve=False):
 
 problems = ['81 - 2', '123 + 49']
 print(arithmetic_arranger(problems,True))
+
+print("Try testing it yourself.")
+print("Enter your arithmetic problems separated with a comma ',' and space between the operator and operands : ")
+user_problem = input().split(",")
+print(arithmetic_arranger(user_problem,True))
